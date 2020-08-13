@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'src/picture_cache.dart';
-import 'src/backdrop_filter.dart';
 
 import 'common.dart';
+import 'src/picture_cache.dart';
+import 'src/backdrop_filter.dart';
+import 'src/cubic_bezier.dart';
+import 'src/cull_opacity.dart';
+import 'src/simple_animation.dart';
 
 const String kMacrobenchmarks = 'Macrobenchmarks';
 
