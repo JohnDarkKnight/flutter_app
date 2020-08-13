@@ -14,23 +14,19 @@ class PictureCachePage extends StatelessWidget {
       body: DefaultTabController(
         length: kTabNames.length, // This is the number of tabs.
         child: NestedScrollView(
-          key: const Key('nested-scroll'),
-          // this key is used by the driver test
+          key: const Key('nested-scroll'), // this key is used by the driver test
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             // These are the slivers that show up in the "outer" scroll view.
             return <Widget>[
               SliverOverlapAbsorber(
-                handle:
-                    NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
                 child: SliverAppBar(
                   title: const Text('Picture Cache'),
                   pinned: true,
                   expandedHeight: 50.0,
                   forceElevated: innerBoxIsScrolled,
                   bottom: TabBar(
-                    tabs: kTabNames
-                        .map((String name) => Tab(text: name))
-                        .toList(),
+                    tabs: kTabNames.map((String name) => Tab(text: name)).toList(),
                   ),
                 ),
               ),
@@ -165,10 +161,8 @@ class ListItem extends StatelessWidget {
           ),
         ),
         Image.asset(
-          index % 2 == 0
-              ? 'food/butternut_squash_soup.png'
-              : 'food/cherry_pie.png',
-          package: 'flutter_gallery_assets',
+          index % 2 == 0 ? 'images/lake.jpg' : 'images/lake.jpg',
+//          package: 'flutter_app',
           fit: BoxFit.cover,
           width: 110,
           height: 70,
@@ -258,8 +252,7 @@ class ListItem extends StatelessWidget {
       onTap: () {},
       child: Row(
         children: <Widget>[
-          Container(
-              width: 40, alignment: Alignment.center, child: _buildRankText()),
+          Container(width: 40, alignment: Alignment.center, child: _buildRankText()),
           const CircleAvatar(
             radius: 11.5,
           ),
